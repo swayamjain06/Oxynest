@@ -400,7 +400,7 @@
 // -----------------------------------------------------------------
 function loadGoogleReviews() {
   // TODO: Replace with your actual Google API Key and Place ID
-  const apiKey = "AIzaSyDGtOW2Y2geuQ87Q5fEcfycpZHxdHIA8XQ"; 
+  const apiKey = "AIzaSyA6myHzS10YXdcazAFalmXvDkrYCp5cLc8"; 
   const placeId = "YOUR_GOOGLE_PLACE_ID"; 
   
   const track = document.getElementById("testimonialTrack");

@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Oxygen Wellness Clinic — Premium Hyperbaric Oxygen Therapy, Infrared Sauna & Hydrocolon Therapy in Mumbai. Breathe Better. Heal Better. Live Better.">
+<meta name="keywords" content="Hyperbaric Oxygen Therapy, Infrared Sauna, Hydrocolon Therapy, Wellness Clinic, Holistic Healing, HBOT Mumbai">
+<meta property="og:title" content="Oxygen Wellness Clinic | Breathe Better. Heal Better. Live Better.">
+<meta property="og:description" content="Premium oxygen & holistic wellness therapies. Certified practitioners. Science-backed healing.">
+<meta property="og:type" content="website">
+<title>Oxygen Wellness Clinic | Breathe Better. Heal Better. Live Better.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Light Theme (Default) */
+  --white: #ffffff;
+  --black: #000000;
+  --olive-light: #90a955;
+  --olive-dark: #6c8630;
+  --gold: #c1b254;
+  --gold-light: #cbbb58;
+  
+  /* Theme Variables */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8faf5;
+  --bg-card: #fafbf8;
+  --bg-overlay: rgba(250, 251, 248, 0.95);
+  --text-primary: #000000;
+  --text-secondary: #2d3319;
+  --text-muted: #4a5324;
+  --border-color: rgba(144, 169, 85, 0.15);
+  --border-accent: rgba(144, 169, 85, 0.3);
+  --accent-primary: #90a955;
+  --accent-secondary: #6c8630;
+  --accent-gold: #c1b254;
+  --accent-gold-light: #cbbb58;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(144, 169, 85, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --glow-color: rgba(144, 169, 85, 0.15);
+  
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+  --radius: 20px;
+  --transition: 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a0f05;
+  --bg-secondary: #0f1408;
+  --bg-card: #151a0d;
+  --bg-overlay: rgba(21, 26, 13, 0.95);
+  --text-primary: #ffffff;
+  --text-secondary: #e8f0d9;
+  --text-muted: #a8b88d;
+  --border-color: rgba(144, 169, 85, 0.15);
+  --border-accent: rgba(144, 169, 85, 0.4);
+  --accent-primary: #90a955;
+  --accent-secondary: #6c8630;
+  --accent-gold: #c1b254;
+  --accent-gold-light: #cbbb58;
+  --glass-bg: rgba(21, 26, 13, 0.7);
+  --glass-border: rgba(144, 169, 85, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --glow-color: rgba(144, 169, 85, 0.2);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:var(--font-body);
+  background:var(--bg-primary);
+  color:var(--text-primary);
+  overflow-x:hidden;
+  line-height:1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── CANVAS PARTICLES ── */
+#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.4}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg-secondary)}
+::-webkit-scrollbar-thumb{background:var(--accent-primary);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent-secondary)}
+
+/* ── NAVBAR ── */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;
+  transition:all .4s ease;background:transparent;
+}
+.navbar.scrolled{
+  background:var(--bg-overlay);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border-color);
+  padding:.8rem 2rem;
+  box-shadow:0 4px 20px var(--shadow-color);
+}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.nav-logo-icon{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  box-shadow:0 4px 15px rgba(144, 169, 85, 0.3);
+}
+.nav-logo-text{font-family:var(--font-display);font-size:1.3rem;color:var(--text-primary);line-height:1.1}
+.nav-logo-sub{font-family:var(--font-body);font-size:.65rem;color:var(--accent-primary);letter-spacing:.2em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--text-muted);font-size:.88rem;
+  font-weight:500;letter-spacing:.05em;transition:color .3s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;
+  background:var(--accent-primary);transition:width .3s;
+}
+.nav-links a:hover{color:var(--accent-primary)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;border:none;padding:.6rem 1.5rem;border-radius:50px;
+  font-family:var(--font-body);font-size:.85rem;font-weight:500;
+  cursor:pointer;transition:all .3s;text-decoration:none;
+  box-shadow:0 4px 15px rgba(144, 169, 85, 0.3);
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(144, 169, 85, 0.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.hamburger span{width:24px;height:2px;background:var(--accent-primary);border-radius:2px;transition:all .3s}
+.mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--bg-overlay);backdrop-filter:blur(20px);z-index:999;
+  flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+}
+.mobile-menu.active{display:flex}
+.mobile-menu a{
+  font-family:var(--font-display);font-size:2rem;color:var(--text-primary);
+  text-decoration:none;transition:color .3s;
+}
+.mobile-menu a:hover{color:var(--accent-primary)}
+.mobile-close{
+  position:absolute;top:1.5rem;right:2rem;font-size:2rem;
+  color:var(--text-muted);cursor:pointer;background:none;border:none;
+}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:6rem 2rem 4rem;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 70% at 50% 0%, rgba(144, 169, 85, 0.12) 0%, transparent 60%),
+             radial-gradient(ellipse 60% 50% at 80% 80%, rgba(108, 134, 48, 0.08) 0%, transparent 50%),
+             linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  z-index:1;
+}
+.hero-ring{
+  position:absolute;border-radius:50%;
+  border:1px solid rgba(144, 169, 85, 0.12);
+  animation:ring-expand 8s linear infinite;
+}
+.hero-ring:nth-child(1){width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:0s}
+.hero-ring:nth-child(2){width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:2s}
+.hero-ring:nth-child(3){width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:4s}
+@keyframes ring-expand{
+  0%{opacity:.4;transform:translate(-50%,-50%) scale(.95)}
+  50%{opacity:.1}
+  100%{opacity:.4;transform:translate(-50%,-50%) scale(1.05)}
+}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:860px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(144, 169, 85, 0.1);border:1px solid rgba(144, 169, 85, 0.3);
+  border-radius:50px;padding:.4rem 1.2rem;font-size:.75rem;
+  color:var(--accent-primary);letter-spacing:.15em;text-transform:uppercase;
+  margin-bottom:2rem;animation:fade-up .8s ease both;
+}
+.hero-badge-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--accent-primary);
+  animation:pulse-dot 2s ease infinite;
+}
+@keyframes pulse-dot{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(1.5)}
+}
+.hero-title{
+  font-family:var(--font-display);font-size:clamp(3rem,7vw,6rem);
+  line-height:1.05;margin-bottom:1.5rem;animation:fade-up .8s ease .1s both;
+}
+.hero-title em{font-style:italic;color:var(--accent-primary)}
+.hero-subtitle{
+  font-family:var(--font-accent);font-size:clamp(1.3rem,2.5vw,1.8rem);
+  color:var(--text-muted);font-weight:300;letter-spacing:.05em;
+  margin-bottom:3rem;animation:fade-up .8s ease .2s both;
+}
+.hero-btns{
+  display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+  animation:fade-up .8s ease .3s both;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;border:none;padding:.9rem 2.2rem;border-radius:50px;
+  font-family:var(--font-body);font-size:.9rem;font-weight:500;
+  cursor:pointer;transition:all .3s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.5rem;
+  box-shadow:0 4px 15px rgba(144, 169, 85, 0.3);
+}
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(144, 169, 85, 0.4);
+}
+.btn-outline{
+  background:transparent;color:var(--accent-primary);
+  border:1px solid rgba(144, 169, 85, 0.4);
+  padding:.9rem 2.2rem;border-radius:50px;
+  font-family:var(--font-body);font-size:.9rem;font-weight:500;
+  cursor:pointer;transition:all .3s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-outline:hover{
+  background:rgba(144, 169, 85, 0.1);
+  border-color:var(--accent-primary);
+  transform:translateY(-3px);
+}
+.hero-stats{
+  display:flex;gap:2rem;justify-content:center;margin-top:4rem;
+  flex-wrap:wrap;animation:fade-up .8s ease .5s both;
+}
+.hero-stat{text-align:center}
+.hero-stat-num{
+  font-family:var(--font-display);font-size:2.2rem;
+  color:var(--accent-primary);line-height:1;
+}
+.hero-stat-label{
+  font-size:.75rem;color:var(--text-muted);letter-spacing:.1em;
+  text-transform:uppercase;margin-top:.3rem;
+}
+@keyframes fade-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.scroll-indicator{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;flex-direction:column;align-items:center;
+  gap:.5rem;animation:float 3s ease infinite;
+}
+.scroll-line{
+  width:1px;height:50px;
+  background:linear-gradient(to bottom,transparent,var(--accent-primary));
+  animation:scroll-line 2s ease infinite;
+}
+@keyframes scroll-line{
+  0%{transform:scaleY(0);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+  51%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+@keyframes float{
+  0%,100%{transform:translateX(-50%) translateY(0)}
+  50%{transform:translateX(-50%) translateY(-8px)}
+}
+
+/* ── SECTION BASE ── */
+section{position:relative;z-index:1}
+.section-pad{padding:7rem 2rem}
+.container{max-width:1200px;margin:0 auto}
+.section-label{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent-primary);margin-bottom:1rem;display:block;
+  font-weight:600;
+}
+.section-title{
+  font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1.15;margin-bottom:1.5rem;
+}
+.section-title em{font-style:italic;color:var(--accent-primary)}
+.section-subtitle{
+  color:var(--text-muted);font-size:1.05rem;max-width:600px;line-height:1.8;
+}
+
+/* ── GLASS CARD ── */
+.glass-card{
+  background:var(--glass-bg);backdrop-filter:blur(20px);
+  border:1px solid var(--glass-border);border-radius:var(--radius);
+  transition:all var(--transition);
+}
+.glass-card:hover{
+  background:var(--bg-card);
+  border-color:var(--border-accent);
+  transform:translateY(-4px);
+  box-shadow:0 20px 60px var(--shadow-color), 0 0 40px var(--glow-color);
+}
+
+/* ── THERAPIES PREVIEW ── */
+.therapies-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.5rem;margin-top:4rem;
+}
+.therapy-card{padding:2.5rem;position:relative;overflow:hidden;cursor:pointer}
+.therapy-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent,var(--glow-color));
+  border-radius:var(--radius);opacity:0;transition:.4s;
+}
+.therapy-card:hover::before{opacity:1}
+.therapy-icon{
+  width:64px;height:64px;border-radius:16px;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;margin-bottom:1.5rem;position:relative;z-index:1;
+  box-shadow:0 8px 25px rgba(144, 169, 85, 0.3);
+}
+.therapy-icon::after{
+  content:'';position:absolute;inset:-4px;border-radius:20px;
+  border:1px solid rgba(144, 169, 85, 0.3);
+  animation:icon-pulse 3s ease infinite;
+}
+@keyframes icon-pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.3;transform:scale(1.1)}
+}
+.therapy-card h3{
+  font-family:var(--font-display);font-size:1.5rem;
+  margin-bottom:.8rem;position:relative;z-index:1;
+}
+.therapy-card p{
+  color:var(--text-muted);font-size:.9rem;line-height:1.7;
+  position:relative;z-index:1;
+}
+.therapy-card-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:var(--accent-primary);font-size:.85rem;font-weight:500;
+  margin-top:1.2rem;text-decoration:none;position:relative;z-index:1;
+  transition:gap .3s;
+}
+.therapy-card-link:hover{gap:.8rem}
+
+/* ── ABOUT ── */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.about-visual{position:relative}
+.about-img-frame{
+  aspect-ratio:4/5;border-radius:24px;
+  background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));
+  border:1px solid var(--border-color);overflow:hidden;position:relative;
+  box-shadow:0 20px 60px var(--shadow-color);
+}
+.about-img-inner{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(144, 169, 85, 0.2),rgba(108, 134, 48, 0.15));
+  display:flex;align-items:center;justify-content:center;
+}
+.about-img-icon{font-size:6rem;opacity:.3}
+.about-counter-badge{
+  position:absolute;background:var(--glass-bg);
+  backdrop-filter:blur(20px);border:1px solid var(--glass-border);
+  border-radius:16px;padding:1.2rem 1.5rem;
+  animation:float 4s ease infinite;
+  box-shadow:0 8px 25px var(--shadow-color);
+}
+.about-counter-badge:nth-child(2){top:10%;right:-15%;animation-delay:1s}
+.about-counter-badge:nth-child(3){bottom:15%;left:-10%;animation-delay:2s}
+.counter-num{
+  font-family:var(--font-display);font-size:2rem;
+  color:var(--accent-primary);display:block;
+}
+.counter-text{
+  font-size:.75rem;color:var(--text-muted);letter-spacing:.08em;
+}
+.about-timeline{margin-top:3rem;position:relative;padding-left:2rem}
+.about-timeline::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,var(--accent-primary),transparent);
+}
+.timeline-item{margin-bottom:2rem;position:relative}
+.timeline-item::before{
+  content:'';position:absolute;left:-2rem;top:.4rem;
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent-primary);
+  border:2px solid var(--bg-primary);
+}
+.timeline-year{
+  font-size:.75rem;color:var(--accent-primary);
+  letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+}
+.timeline-text{color:var(--text-muted);font-size:.9rem;margin-top:.3rem}
+
+/* ── STATS SECTION ── */
+.stats-section{
+  background:var(--bg-secondary);
+  border-top:1px solid var(--border-color);
+  border-bottom:1px solid var(--border-color);
+}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.stat-item{text-align:center;padding:3rem 1rem}
+.stat-number{
+  font-family:var(--font-display);font-size:3.5rem;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;
+}
+.stat-suffix{
+  font-family:var(--font-display);font-size:2rem;
+  color:var(--accent-primary);
+}
+.stat-label{
+  color:var(--text-muted);font-size:.82rem;letter-spacing:.1em;
+  text-transform:uppercase;margin-top:.8rem;
+}
+
+/* ── FULL THERAPY SECTIONS ── */
+.therapy-section{
+  padding:6rem 2rem;
+  border-bottom:1px solid var(--border-color);
+}
+.therapy-section:nth-child(even){background:var(--bg-secondary)}
+.therapy-header{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  align-items:start;margin-bottom:4rem;
+}
+.therapy-visual-box{
+  border-radius:24px;
+  background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));
+  border:1px solid var(--border-color);padding:3rem;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;min-height:300px;position:relative;overflow:hidden;
+  box-shadow:0 20px 60px var(--shadow-color);
+}
+.therapy-big-icon{
+  font-size:5rem;margin-bottom:1.5rem;position:relative;z-index:1;
+}
+.therapy-visual-glow{
+  position:absolute;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,var(--glow-color),transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.info-card{padding:2rem;border-radius:16px}
+.info-card h4{
+  font-family:var(--font-display);font-size:1.2rem;
+  margin-bottom:1rem;color:var(--accent-primary);
+}
+.info-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.info-card ul li{
+  color:var(--text-muted);font-size:.88rem;
+  display:flex;gap:.6rem;align-items:flex-start;line-height:1.5;
+}
+.info-card ul li::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--accent-primary);margin-top:.55rem;flex-shrink:0;
+}
+.dos-donts{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.dos-card{
+  border-left:3px solid var(--accent-secondary);padding:1.5rem;
+}
+.donts-card{
+  border-left:3px solid var(--accent-gold);padding:1.5rem;
+}
+.dos-card h4{
+  color:var(--accent-secondary);font-family:var(--font-display);
+  font-size:1.1rem;margin-bottom:1rem;
+}
+.donts-card h4{
+  color:var(--accent-gold);font-family:var(--font-display);
+  font-size:1.1rem;margin-bottom:1rem;
+}
+.adv-disadv{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.adv-card{border-top:2px solid var(--accent-primary);padding-top:1.5rem}
+.disadv-card{border-top:2px solid var(--accent-gold-light);padding-top:1.5rem}
+.adv-card h4{
+  color:var(--accent-primary);font-family:var(--font-display);
+  font-size:1.1rem;margin-bottom:1rem;
+}
+.disadv-card h4{
+  color:var(--accent-gold-light);font-family:var(--font-display);
+  font-size:1.1rem;margin-bottom:1rem;
+}
+
+/* ── RESEARCH PAPERS ── */
+.research-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.paper-card{padding:2rem;border-radius:16px;position:relative}
+.paper-badge{
+  display:inline-block;font-size:.65rem;letter-spacing:.1em;
+  text-transform:uppercase;background:rgba(144, 169, 85, 0.1);
+  color:var(--accent-primary);border-radius:50px;
+  padding:.3rem .8rem;margin-bottom:1rem;
+  border:1px solid rgba(144, 169, 85, 0.3);
+}
+.paper-card h4{
+  font-family:var(--font-display);font-size:1.1rem;
+  line-height:1.4;margin-bottom:.8rem;
+}
+.paper-abstract{
+  color:var(--text-muted);font-size:.83rem;
+  line-height:1.6;margin-bottom:1rem;
+}
+.paper-source{
+  font-size:.75rem;color:var(--text-muted);
+  opacity:.7;margin-bottom:1rem;
+}
+.btn-download{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;border:none;padding:.5rem 1.2rem;border-radius:50px;
+  font-size:.8rem;cursor:pointer;transition:all .3s;text-decoration:none;
+  box-shadow:0 4px 15px rgba(144, 169, 85, 0.25);
+}
+.btn-download:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(144, 169, 85, 0.35);
+}
+
+/* ── VIDEO CENTER ── */
+.video-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.video-card{
+  border-radius:16px;overflow:hidden;cursor:pointer;position:relative;
+}
+.video-thumb{
+  aspect-ratio:16/9;
+  background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.video-play{
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(144, 169, 85, 0.2);
+  border:2px solid var(--accent-primary);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;transition:all .3s;position:relative;z-index:1;
+}
+.video-card:hover .video-play{
+  background:var(--accent-secondary);transform:scale(1.1);
+}
+.video-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,var(--bg-overlay),transparent);
+  opacity:0;transition:.3s;
+}
+.video-card:hover .video-overlay{opacity:1}
+.video-info{padding:1.2rem}
+.video-category{
+  font-size:.7rem;color:var(--accent-primary);
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem;
+  font-weight:600;
+}
+.video-title{
+  font-family:var(--font-display);font-size:1.05rem;line-height:1.3;
+}
+.video-duration{
+  font-size:.78rem;color:var(--text-muted);margin-top:.4rem;
+}
+.video-search{
+  display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;align-items:center;
+}
+.search-input{
+  flex:1;min-width:200px;background:var(--glass-bg);
+  border:1px solid var(--glass-border);border-radius:50px;
+  padding:.7rem 1.5rem;color:var(--text-primary);
+  font-family:var(--font-body);font-size:.9rem;outline:none;
+  transition:border-color .3s;
+}
+.search-input:focus{border-color:var(--accent-primary)}
+.search-input::placeholder{color:var(--text-muted)}
+.filter-tabs{display:flex;gap:.6rem;flex-wrap:wrap}
+.filter-tab{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  color:var(--text-muted);padding:.5rem 1.1rem;border-radius:50px;
+  font-size:.8rem;cursor:pointer;transition:all .3s;
+}
+.filter-tab.active,.filter-tab:hover{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+  color:var(--accent-primary);
+}
+
+/* ── FAQ ── */
+.faq-list{margin-top:3rem;display:flex;flex-direction:column;gap:.8rem}
+.faq-item{border-radius:14px;overflow:hidden}
+.faq-question{
+  width:100%;background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  color:var(--text-primary);padding:1.3rem 1.8rem;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;font-family:var(--font-body);font-size:.95rem;
+  font-weight:500;text-align:left;transition:all .3s;border-radius:14px;
+}
+.faq-question:hover{
+  background:var(--bg-card);border-color:var(--border-accent);
+}
+.faq-question.open{
+  border-radius:14px 14px 0 0;border-color:var(--border-accent);
+  background:rgba(144, 169, 85, 0.08);
+}
+.faq-arrow{
+  font-size:1.2rem;transition:transform .3s;
+  color:var(--accent-primary);flex-shrink:0;
+}
+.faq-question.open .faq-arrow{transform:rotate(45deg)}
+.faq-answer{
+  background:rgba(144, 169, 85, 0.05);
+  border:1px solid var(--border-color);border-top:none;
+  border-radius:0 0 14px 14px;max-height:0;overflow:hidden;
+  transition:max-height .4s ease,padding .4s ease;
+}
+.faq-answer.open{max-height:500px;padding:1.3rem 1.8rem}
+.faq-answer p{color:var(--text-muted);font-size:.9rem;line-height:1.8}
+
+/* ── CONTACT ── */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;
+}
+.form-group{margin-bottom:1.5rem}
+.form-label{
+  display:block;font-size:.82rem;color:var(--text-muted);
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;
+}
+.form-input,.form-select,.form-textarea{
+  width:100%;background:var(--glass-bg);
+  border:1px solid var(--glass-border);border-radius:12px;
+  padding:.85rem 1.2rem;color:var(--text-primary);
+  font-family:var(--font-body);font-size:.9rem;outline:none;
+  transition:all .3s;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{
+  border-color:var(--accent-primary);
+  box-shadow:0 0 0 3px rgba(144, 169, 85, 0.1);
+}
+.form-select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M6 8L0 0h12z' fill='%2390a955'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1.2rem center;cursor:pointer;
+}
+.form-select option{
+  background:var(--bg-card);color:var(--text-primary);
+}
+.form-textarea{min-height:130px;resize:vertical}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.contact-card{padding:2rem}
+.contact-card-icon{font-size:1.8rem;margin-bottom:1rem}
+.contact-card h4{
+  font-family:var(--font-display);font-size:1.2rem;margin-bottom:.5rem;
+}
+.contact-card a,.contact-card p{
+  color:var(--text-muted);font-size:.9rem;text-decoration:none;
+  transition:color .3s;
+}
+.contact-card a:hover{color:var(--accent-primary)}
+.map-placeholder{
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));
+  border:1px solid var(--border-color);min-height:280px;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;margin-top:2rem;gap:1rem;overflow:hidden;
+  position:relative;
+}
+.map-pin{font-size:3rem;animation:float 3s ease infinite}
+.map-placeholder p{color:var(--text-muted);font-size:.9rem}
+.hours-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:1rem;
+}
+.hours-row{
+  display:flex;justify-content:space-between;font-size:.82rem;
+  color:var(--text-muted);padding:.3rem 0;
+  border-bottom:1px solid var(--border-color);
+}
+.hours-row span:last-child{color:var(--accent-primary)}
+
+/* ── TESTIMONIALS ── */
+.testimonials-slider{position:relative;overflow:hidden;margin-top:3rem}
+.testimonials-track{
+  display:flex;gap:1.5rem;
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.testimonial-card{
+  min-width:360px;padding:2.5rem;border-radius:20px;flex-shrink:0;
+}
+.testimonial-stars{
+  display:flex;gap:.3rem;color:var(--accent-gold-light);
+  font-size:1rem;margin-bottom:1.2rem;
+}
+.testimonial-text{
+  font-family:var(--font-accent);font-size:1.1rem;
+  line-height:1.7;color:var(--text-primary);font-style:italic;
+  margin-bottom:1.5rem;
+}
+.testimonial-author{display:flex;align-items:center;gap:.8rem}
+.testimonial-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;font-weight:600;color:#fff;
+}
+.testimonial-name{font-weight:600;font-size:.9rem}
+.testimonial-therapy{font-size:.78rem;color:var(--accent-primary)}
+.slider-controls{
+  display:flex;gap:.8rem;justify-content:center;margin-top:2rem;
+}
+.slider-btn{
+  width:44px;height:44px;border-radius:50%;background:var(--glass-bg);
+  border:1px solid var(--glass-border);color:var(--text-primary);
+  font-size:1.1rem;cursor:pointer;transition:all .3s;
+}
+.slider-btn:hover{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+}
+
+/* ── BOOKING ── */
+.booking-section{
+  background:var(--bg-secondary);
+  border-top:1px solid var(--border-color);
+}
+.booking-card{
+  background:var(--glass-bg);backdrop-filter:blur(30px);
+  border:1px solid var(--glass-border);border-radius:28px;
+  padding:3.5rem;max-width:800px;margin:0 auto;
+  box-shadow:0 25px 60px var(--shadow-color);
+}
+.booking-steps{
+  display:flex;gap:0;margin-bottom:3rem;counter-reset:step;
+}
+.booking-step{
+  flex:1;text-align:center;position:relative;counter-increment:step;
+}
+.booking-step::after{
+  content:'';position:absolute;top:18px;left:50%;width:100%;height:1px;
+  background:var(--border-color);
+}
+.booking-step:last-child::after{display:none}
+.step-circle{
+  width:38px;height:38px;border-radius:50%;background:var(--glass-bg);
+  border:1px solid var(--glass-border);display:flex;align-items:center;
+  justify-content:center;font-size:.8rem;font-weight:600;
+  color:var(--text-muted);margin:0 auto .6rem;position:relative;
+  z-index:1;transition:all .3s;
+}
+.booking-step.active .step-circle{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  border-color:var(--accent-primary);color:#fff;
+  box-shadow:0 0 20px rgba(144, 169, 85, 0.4);
+}
+.step-label{
+  font-size:.72rem;color:var(--text-muted);letter-spacing:.05em;
+}
+.calendar-grid{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem;margin-top:1rem;
+}
+.cal-day-header{
+  text-align:center;font-size:.7rem;color:var(--text-muted);
+  padding:.4rem;letter-spacing:.08em;text-transform:uppercase;
+}
+.cal-day{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  border-radius:8px;font-size:.85rem;cursor:pointer;
+  transition:all .3s;border:1px solid transparent;
+}
+.cal-day:hover:not(.empty):not(.past){
+  background:rgba(144, 169, 85, 0.1);
+  border-color:var(--border-accent);
+  color:var(--accent-primary);
+}
+.cal-day.today{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+  color:var(--accent-primary);font-weight:600;
+}
+.cal-day.selected{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;border-color:var(--accent-primary);
+}
+.cal-day.past,.cal-day.empty{
+  color:var(--text-muted);opacity:.3;cursor:default;
+}
+.time-slots{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.time-slot{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  border-radius:8px;padding:.5rem 1rem;font-size:.83rem;
+  color:var(--text-muted);cursor:pointer;transition:all .3s;
+}
+.time-slot:hover,.time-slot.selected{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+  color:var(--accent-primary);
+}
+
+/* ── DARK/LIGHT TOGGLE ── */
+.theme-toggle{
+  position:fixed;bottom:6.5rem;right:1.5rem;z-index:900;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--glass-bg);backdrop-filter:blur(10px);
+  border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1.3rem;transition:all .3s;
+  box-shadow:0 4px 15px var(--shadow-color);
+}
+.theme-toggle:hover{
+  border-color:var(--accent-primary);transform:scale(1.1);
+}
+
+/* ── WHATSAPP ── */
+.whatsapp-btn{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:900;
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:1.6rem;
+  box-shadow:0 8px 25px rgba(144, 169, 85, 0.35);
+  transition:all .3s;animation:whatsapp-pulse 3s ease infinite;
+}
+.whatsapp-btn:hover{transform:scale(1.1)}
+@keyframes whatsapp-pulse{
+  0%,100%{box-shadow:0 8px 25px rgba(144, 169, 85, 0.35)}
+  50%{box-shadow:0 8px 40px rgba(144, 169, 85, 0.6)}
+}
+.chat-btn{
+  position:fixed;bottom:4.5rem;right:1.5rem;z-index:900;
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:1.2rem;
+  box-shadow:0 6px 20px rgba(144, 169, 85, 0.3);
+  transition:all .3s;cursor:pointer;border:none;
+}
+.chat-btn:hover{transform:scale(1.1)}
+
+/* ── TEAM ── */
+.team-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;margin-top:3rem;
+}
+.team-card{text-align:center;padding:2rem}
+.team-avatar{
+  width:100px;height:100px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  margin:0 auto 1.2rem;display:flex;align-items:center;
+  justify-content:center;font-size:2.5rem;
+  border:3px solid var(--border-accent);position:relative;
+}
+.team-avatar::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:1px solid var(--border-color);
+}
+.team-name{
+  font-family:var(--font-display);font-size:1.2rem;margin-bottom:.3rem;
+}
+.team-role{
+  font-size:.8rem;color:var(--accent-primary);
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.6rem;
+  font-weight:600;
+}
+.team-bio{color:var(--text-muted);font-size:.85rem;line-height:1.6}
+
+/* ── FOOTER ── */
+.footer{
+  background:linear-gradient(to bottom,var(--bg-secondary),var(--bg-primary));
+  border-top:1px solid var(--border-color);padding:5rem 2rem 2rem;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;margin-bottom:4rem;
+}
+.footer-brand .nav-logo{margin-bottom:1.2rem}
+.footer-desc{
+  color:var(--text-muted);font-size:.88rem;line-height:1.8;max-width:280px;
+}
+.footer-socials{display:flex;gap:.8rem;margin-top:1.5rem}
+.social-icon{
+  width:38px;height:38px;border-radius:50%;background:var(--glass-bg);
+  border:1px solid var(--glass-border);display:flex;align-items:center;
+  justify-content:center;text-decoration:none;font-size:.95rem;
+  color:var(--text-muted);transition:all .3s;
+}
+.social-icon:hover{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+  color:var(--accent-primary);transform:translateY(-3px);
+}
+.footer-col h4{
+  font-family:var(--font-display);font-size:1.1rem;
+  margin-bottom:1.2rem;color:var(--text-primary);
+}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{
+  color:var(--text-muted);text-decoration:none;font-size:.88rem;
+  transition:color .3s;
+}
+.footer-links a:hover{color:var(--accent-primary)}
+.newsletter-form{display:flex;gap:.5rem;margin-top:.8rem}
+.newsletter-input{
+  flex:1;background:var(--glass-bg);border:1px solid var(--glass-border);
+  border-radius:50px;padding:.6rem 1.1rem;color:var(--text-primary);
+  font-family:var(--font-body);font-size:.85rem;outline:none;
+}
+.newsletter-btn{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;border:none;padding:.6rem 1rem;border-radius:50px;
+  font-size:.8rem;cursor:pointer;white-space:nowrap;transition:all .3s;
+}
+.newsletter-btn:hover{transform:translateY(-2px)}
+.footer-bottom{
+  border-top:1px solid var(--border-color);padding-top:1.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{color:var(--text-muted);font-size:.82rem}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{
+  color:var(--text-muted);text-decoration:none;font-size:.82rem;
+  transition:color .3s;
+}
+.footer-legal a:hover{color:var(--accent-primary)}
+
+/* ── CHATBOT ── */
+.chatbot-window{
+  position:fixed;bottom:8rem;right:1.5rem;width:320px;
+  background:var(--bg-card);border:1px solid var(--glass-border);
+  border-radius:20px;box-shadow:0 25px 60px var(--shadow-color);
+  z-index:1000;overflow:hidden;transform:scale(.9) translateY(20px);
+  opacity:0;transition:all .3s;pointer-events:none;
+}
+.chatbot-window.active{
+  transform:scale(1) translateY(0);opacity:1;pointer-events:all;
+}
+.chatbot-header{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;
+}
+.chatbot-header-info{display:flex;align-items:center;gap:.8rem}
+.chatbot-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.2);display:flex;align-items:center;
+  justify-content:center;font-size:1.1rem;
+}
+.chatbot-name{font-weight:600;font-size:.9rem;color:#fff}
+.chatbot-status{font-size:.72rem;color:rgba(255,255,255,.7)}
+.chatbot-close{
+  background:none;border:none;color:rgba(255,255,255,.7);
+  font-size:1.2rem;cursor:pointer;
+}
+.chatbot-messages{
+  height:260px;overflow-y:auto;padding:1rem;
+  display:flex;flex-direction:column;gap:.8rem;
+}
+.chat-msg{
+  max-width:85%;padding:.7rem 1rem;border-radius:14px;
+  font-size:.85rem;line-height:1.5;
+}
+.chat-msg.bot{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  color:var(--text-primary);align-self:flex-start;
+  border-radius:4px 14px 14px 14px;
+}
+.chat-msg.user{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#fff;align-self:flex-end;border-radius:14px 4px 14px 14px;
+}
+.chatbot-input-row{
+  padding:.8rem;border-top:1px solid var(--glass-border);
+  display:flex;gap:.5rem;
+}
+.chatbot-input{
+  flex:1;background:var(--glass-bg);border:1px solid var(--glass-border);
+  border-radius:50px;padding:.5rem 1rem;color:var(--text-primary);
+  font-family:var(--font-body);font-size:.83rem;outline:none;
+}
+.chatbot-send{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  border:none;border-radius:50%;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:#fff;font-size:.9rem;
+}
+.chatbot-quick{
+  display:flex;gap:.4rem;flex-wrap:wrap;padding:.6rem 1rem 0;
+  border-top:1px solid var(--glass-border);
+}
+.quick-btn{
+  background:rgba(144, 169, 85, 0.08);
+  border:1px solid rgba(144, 169, 85, 0.2);
+  color:var(--accent-primary);padding:.3rem .7rem;
+  border-radius:50px;font-size:.73rem;cursor:pointer;
+  transition:all .2s;
+}
+.quick-btn:hover{background:rgba(144, 169, 85, 0.15)}
+
+/* ── SUCCESS POPUP ── */
+.success-popup{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.8);
+  background:var(--bg-card);border:1px solid var(--glass-border);
+  border-radius:24px;padding:3rem;text-align:center;z-index:2000;
+  opacity:0;pointer-events:none;transition:all .4s;
+  backdrop-filter:blur(20px);box-shadow:0 30px 80px var(--shadow-color);
+}
+.success-popup.active{
+  transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:all;
+}
+.success-icon{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-secondary),var(--accent-primary));
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.5rem;margin:0 auto 1.5rem;
+  animation:success-bounce .6s ease;
+}
+@keyframes success-bounce{
+  0%{transform:scale(0)}
+  70%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+.overlay-bg{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  backdrop-filter:blur(4px);z-index:1999;opacity:0;
+  pointer-events:none;transition:opacity .3s;
+}
+.overlay-bg.active{opacity:1;pointer-events:all}
+
+/* ── PAGE NAV ── */
+.page-tabs{display:flex;gap:.5rem;margin-bottom:3rem;flex-wrap:wrap}
+.page-tab{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  color:var(--text-muted);padding:.6rem 1.4rem;border-radius:50px;
+  font-size:.85rem;cursor:pointer;transition:all .3s;text-decoration:none;
+}
+.page-tab.active,.page-tab:hover{
+  background:rgba(144, 169, 85, 0.15);
+  border-color:var(--accent-primary);
+  color:var(--accent-primary);
+}
+.page-section{display:none}
+.page-section.active{display:block}
+
+/* ── BENEFITS ICONS ── */
+.benefits-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1.2rem;margin-top:3rem;
+}
+.benefit-item{
+  text-align:center;padding:1.8rem 1rem;border-radius:16px;
+  transition:all var(--transition);
+}
+.benefit-item:hover{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  transform:translateY(-4px);
+}
+.benefit-icon{font-size:2.2rem;margin-bottom:.8rem}
+.benefit-title{
+  font-size:.85rem;font-weight:600;color:var(--text-primary);margin-bottom:.3rem;
+}
+.benefit-text{
+  font-size:.78rem;color:var(--text-muted);line-height:1.5;
+}
+
+/* ── CERTIFICATIONS ── */
+.cert-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:1rem;margin-top:2rem;
+}
+.cert-badge{
+  background:var(--glass-bg);border:1px solid var(--border-accent);
+  border-radius:12px;padding:1.2rem;text-align:center;
+}
+.cert-icon{font-size:2rem;margin-bottom:.5rem}
+.cert-name{
+  font-size:.78rem;color:var(--accent-primary);
+  font-weight:600;letter-spacing:.05em;
+}
+.cert-body{
+  font-size:.72rem;color:var(--text-muted);margin-top:.2rem;
+}
+
+/* ── MOBILE ── */
+@media(max-width:1024px){
+  .about-grid,.therapy-header,.contact-grid{
+    grid-template-columns:1fr;gap:2.5rem;
+  }
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .about-counter-badge:nth-child(2){right:-5%}
+  .about-counter-badge:nth-child(3){left:0}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-title{font-size:2.8rem}
+  .info-grid,.dos-donts,.adv-disadv{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:0}
+  .contact-grid{grid-template-columns:1fr}
+  .chatbot-window{width:calc(100vw - 3rem);right:1.5rem}
+  .booking-steps{display:none}
+  .calendar-grid{gap:.2rem}
+  .testimonial-card{min-width:280px}
+  .hours-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .section-pad{padding:4rem 1.2rem}
+  .hero{padding:5rem 1.2rem 3rem}
+  .hero-stats{gap:1.2rem}
+  .hero-stat-num{font-size:1.6rem}
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal{
+  opacity:0;transform:translateY(40px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon">🫁</div>
+    <div>
+      <div class="nav-logo-text">Oxygen Wellness</div>
+      <div class="nav-logo-sub">Clinic</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#therapies">Therapies</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">Book Now</a>
+  <div class="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <a href="#home" onclick="toggleMobileMenu()">Home</a>
+  <a href="#about" onclick="toggleMobileMenu()">About</a>
+  <a href="#therapies" onclick="toggleMobileMenu()">Therapies</a>
+  <a href="#videos" onclick="toggleMobileMenu()">Videos</a>
+  <a href="#research" onclick="toggleMobileMenu()">Research</a>
+  <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+  <a href="#booking" onclick="toggleMobileMenu()" class="nav-cta" style="font-size:1rem;padding:.8rem 2rem">Book Appointment</a>
+</div>
+
+<!-- HOME / HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Certified Wellness Clinic · Mumbai</div>
+    <h1 class="hero-title">Breathe <em>Better.</em><br>Heal Better.<br>Live Better.</h1>
+    <p class="hero-subtitle">Science-backed oxygen & holistic therapies<br>for your complete mind-body transformation.</p>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-primary">📅 Book Consultation</a>
+      <a href="#therapies" class="btn-outline">✦ Explore Therapies</a>
+      <a href="#videos" class="btn-outline">▶ Watch Videos</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num" data-count="5000">0</div><div class="hero-stat-label">Patients Treated</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="18000">0</div><div class="hero-stat-label">Sessions Completed</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="12">0</div><div class="hero-stat-label">Certified Specialists</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="8">0</div><div class="hero-stat-label">Years of Excellence</div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div></div>
+</section>
+
+<!-- THERAPY PREVIEW -->
+<section class="section-pad" id="therapies-preview">
+  <div class="container">
+    <span class="section-label reveal">Our Signature Therapies</span>
+    <h2 class="section-title reveal">Advanced Healing,<br><em>Naturally Delivered</em></h2>
+    <p class="section-subtitle reveal">Three transformative therapies grounded in science and delivered with compassionate care.</p>
+    <div class="therapies-grid">
+      <div class="glass-card therapy-card reveal reveal-delay-1" onclick="document.getElementById('therapies').scrollIntoView({behavior:'smooth'});showTherapy('hbot')">
+        <div class="therapy-icon">🫧</div>
+        <h3>Hyperbaric Oxygen Therapy</h3>
+        <p>Experience healing at the cellular level. HBOT delivers pure oxygen at elevated pressure, accelerating recovery, reducing inflammation and supporting brain health.</p>
+        <a href="#therapies" class="therapy-card-link" onclick="showTherapy('hbot')">Learn More →</a>
+      </div>
+      <div class="glass-card therapy-card reveal reveal-delay-2" onclick="document.getElementById('therapies').scrollIntoView({behavior:'smooth'});showTherapy('sauna')">
+        <div class="therapy-icon">🌡️</div>
+        <h3>Infrared Sauna Therapy</h3>
+        <p>Deep penetrating infrared heat detoxifies at the cellular level, melts away stress, revitalizes skin and supports cardiovascular wellness without excessive heat.</p>
+        <a href="#therapies" class="therapy-card-link" onclick="showTherapy('sauna')">Learn More →</a>
+      </div>
+      <div class="glass-card therapy-card reveal reveal-delay-3" onclick="document.getElementById('therapies').scrollIntoView({behavior:'smooth'});showTherapy('hydro')">
+        <div class="therapy-icon">💧</div>
+        <h3>Hydrocolon Therapy</h3>
+        <p>Gentle, thorough colon cleansing using purified warm water. Restore digestive balance, eliminate toxins, reduce bloating and revitalize your gut microbiome.</p>
+        <a href="#therapies" class="therapy-card-link" onclick="showTherapy('hydro')">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section section-pad">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><div><span class="stat-number" data-count="5000">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Happy Patients</div></div>
+      <div class="stat-item reveal reveal-delay-1"><div><span class="stat-number" data-count="98">0</span><span class="stat-suffix">%</span></div><div class="stat-label">Satisfaction Rate</div></div>
+      <div class="stat-item reveal reveal-delay-2"><div><span class="stat-number" data-count="18000">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Therapy Sessions</div></div>
+      <div class="stat-item reveal reveal-delay-3"><div><span class="stat-number" data-count="12">0</span><span class="stat-suffix"></span></div><div class="stat-label">Certified Specialists</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-frame">
+          <div class="about-img-inner"><div class="about-img-icon">🏥</div></div>
+          <div class="about-counter-badge glass-card">
+            <span class="counter-num">8+</span>
+            <span class="counter-text">Years of Excellence</span>
+          </div>
+          <div class="about-counter-badge glass-card">
+            <span class="counter-num">ISO</span>
+            <span class="counter-text">Certified Clinic</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Where Oxygen Meets <em>Healing Science</em></h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Founded with a vision to bring internationally certified oxygen therapies to India, Oxygen Wellness Clinic has grown into Mumbai's premier holistic healing destination. We combine cutting-edge medical protocols with a deeply human approach to wellness.</p>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem">Our philosophy is simple: your body has an extraordinary capacity to heal itself. We provide the environment, tools and expertise to unlock that potential.</p>
+
+        <div class="about-timeline">
+          <div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-text">Founded with Mumbai's first certified HBOT chamber</div></div>
+          <div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-text">Expanded with Infrared Sauna & Hydrocolon suites</div></div>
+          <div class="timeline-item"><div class="timeline-year">2020</div><div class="timeline-text">ISO certification & international therapy protocols adopted</div></div>
+          <div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-text">Crossed 3,000 patients treated milestone</div></div>
+          <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-text">Expanded to 3 therapy suites & research library launched</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div style="margin-top:6rem">
+      <span class="section-label reveal">Our Experts</span>
+      <h2 class="section-title reveal">Meet the <em>Healing Team</em></h2>
+      <div class="team-grid">
+        <div class="glass-card team-card reveal"><div class="team-avatar">👩‍⚕️</div><div class="team-name">Dr. Priya Sharma</div><div class="team-role">Medical Director & HBOT Specialist</div><div class="team-bio">MBBS, MD with 15 years in hyperbaric medicine. Internationally certified from ECHM, Brussels.</div></div>
+        <div class="glass-card team-card reveal reveal-delay-1"><div class="team-avatar">👨‍⚕️</div><div class="team-name">Dr. Rohan Mehta</div><div class="team-role">Wellness & Nutrition Physician</div><div class="team-bio">Integrative medicine specialist combining allopathic and holistic approaches for complete healing.</div></div>
+        <div class="glass-card team-card reveal reveal-delay-2"><div class="team-avatar">👩‍🔬</div><div class="team-name">Ms. Ananya Joshi</div><div class="team-role">Lead Sauna & Detox Therapist</div><div class="team-bio">Certified in thermotherapy and detoxification protocols. 8+ years of clinical experience.</div></div>
+        <div class="glass-card team-card reveal reveal-delay-3"><div class="team-avatar">👨‍🔬</div><div class="team-name">Mr. Kiran Patel</div><div class="team-role">Hydrocolon Therapy Specialist</div><div class="team-bio">Certified colon hydrotherapist with advanced training in gut health and microbiome restoration.</div></div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div style="margin-top:4rem" class="reveal">
+      <span class="section-label">Certifications & Awards</span>
+      <h3 class="section-title" style="font-size:1.8rem">Trusted by Standards, <em>Driven by Results</em></h3>
+      <div class="cert-grid">
+        <div class="cert-badge"><div class="cert-icon">🏅</div><div class="cert-name">ECHM Certified</div><div class="cert-body">European Committee for Hyperbaric Medicine</div></div>
+        <div class="cert-badge"><div class="cert-icon">✅</div><div class="cert-name">ISO 9001:2015</div><div class="cert-body">Quality Management System</div></div>
+        <div class="cert-badge"><div class="cert-icon">🔬</div><div class="cert-name">NABH Accredited</div><div class="cert-body">National Accreditation Board for Hospitals</div></div>
+        <div class="cert-badge"><div class="cert-icon">🌟</div><div class="cert-name">Best Wellness Clinic</div><div class="cert-body">Mumbai Healthcare Awards 2023</div></div>
+        <div class="cert-badge"><div class="cert-icon">🛡️</div><div class="cert-name">UHMS Member</div><div class="cert-body">Undersea & Hyperbaric Medical Society</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED THERAPIES -->
+<section class="section-pad" id="therapies">
+  <div class="container">
+    <span class="section-label reveal">Deep Dive</span>
+    <h2 class="section-title reveal">Our <em>Therapies</em> in Detail</h2>
+
+    <div class="page-tabs reveal">
+      <a class="page-tab active" onclick="showTherapy('hbot');return false">🫧 HBOT</a>
+      <a class="page-tab" onclick="showTherapy('sauna');return false">🌡️ Infrared Sauna</a>
+      <a class="page-tab" onclick="showTherapy('hydro');return false">💧 Hydrocolon</a>
+    </div>
+
+    <!-- HBOT -->
+    <div class="page-section active" id="therapy-hbot">
+      <div class="therapy-header">
+        <div>
+          <h3 class="section-title" style="font-size:2.2rem">Hyperbaric Oxygen <em>Therapy</em></h3>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Hyperbaric Oxygen Therapy (HBOT) is a medical treatment where you breathe 100% pure oxygen inside a pressurized chamber. The increased atmospheric pressure — typically 1.5 to 3 times normal — allows oxygen to dissolve into all body fluids including plasma, lymph, and cerebrospinal fluid, reaching tissues where circulation may be limited.</p>
+          <p style="color:var(--text-muted);line-height:1.8">This supercharged oxygen environment triggers powerful biological responses: it stimulates the release of stem cells, reduces inflammation, promotes angiogenesis (new blood vessel formation), and accelerates the body's natural healing cascade.</p>
+        </div>
+        <div class="therapy-visual-box">
+          <div class="therapy-visual-glow"></div>
+          <div class="therapy-big-icon">🫧</div>
+          <p style="color:var(--text-muted);font-size:.85rem;text-align:center;line-height:1.6;position:relative;z-index:1">Pressurized chamber delivering<br>100% pure oxygen at 1.5–3 ATA</p>
+          <div style="display:flex;gap:1rem;margin-top:1.5rem;position:relative;z-index:1">
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">60–90</div><div style="font-size:.72rem;color:var(--text-muted)">Minutes/Session</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">1.5–3</div><div style="font-size:.72rem;color:var(--text-muted)">ATA Pressure</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">100%</div><div style="font-size:.72rem;color:var(--text-muted)">Pure O₂</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid reveal">
+        <div class="glass-card info-card">
+          <h4>Conditions HBOT May Help</h4>
+          <ul>
+            <li>Traumatic brain injury & stroke recovery</li>
+            <li>Non-healing wounds & diabetic ulcers</li>
+            <li>Sports injuries & post-surgical recovery</li>
+            <li>Chronic fatigue syndrome</li>
+            <li>Fibromyalgia & long COVID symptoms</li>
+            <li>Autism spectrum support</li>
+            <li>Carbon monoxide poisoning</li>
+            <li>Decompression sickness</li>
+          </ul>
+        </div>
+        <div class="glass-card info-card">
+          <h4>HBOT Benefits</h4>
+          <ul>
+            <li>Faster injury recovery & wound healing</li>
+            <li>Improved oxygen circulation throughout body</li>
+            <li>Significant reduction in inflammation</li>
+            <li>Enhanced brain recovery & cognitive support</li>
+            <li>Accelerated sports performance recovery</li>
+            <li>Powerful anti-aging cellular effects</li>
+            <li>Increased energy & vitality</li>
+            <li>Stem cell mobilization</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dos-donts reveal">
+        <div class="glass-card dos-card">
+          <h4>✅ Do's Before & During HBOT</h4>
+          <ul class="info-card ul" style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Stay well hydrated before your session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Wear 100% cotton, loose-fitting clothing</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Follow all technician instructions carefully</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Inform staff of all medical conditions & medications</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Perform ear equalization as instructed</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-secondary)">✓</span> Rest comfortably — meditate, listen to music, or sleep</li>
+          </ul>
+        </div>
+        <div class="glass-card donts-card">
+          <h4>🚫 Don'ts — For Your Safety</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> No flammable products (perfumes, hairspray, oils)</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> No smoking for 24 hours before therapy</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> Avoid alcohol 24 hours prior to session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> No electronic devices inside the chamber</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> Do not enter with a cold, fever or active infection</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem;align-items:flex-start"><span style="color:var(--accent-gold)">✗</span> No synthetic clothing or metal accessories</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="adv-disadv reveal">
+        <div class="glass-card adv-card">
+          <h4>Advantages</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Non-invasive, drug-free, natural therapy</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Addresses root cause through oxygen delivery</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Accelerates healing significantly</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Medically supervised and safe</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Complements other medical treatments</li>
+          </ul>
+        </div>
+        <div class="glass-card disadv-card">
+          <h4>Considerations</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Ear or sinus pressure discomfort during pressurization</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Not suitable for untreated pneumothorax</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Requires multiple sessions for best results</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Claustrophobia may be a concern for some</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Investment in time (60–90 mins per session)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem" class="reveal">
+        <h3 class="section-title" style="font-size:1.8rem">Research <em>& Publications</em></h3>
+        <div class="research-grid">
+          <div class="glass-card paper-card"><div class="paper-badge">Peer Reviewed</div><h4>HBOT for Traumatic Brain Injury: A Systematic Review</h4><p class="paper-abstract">This meta-analysis of 14 randomized controlled trials found significant improvements in cognitive function and quality of life measures following HBOT protocols in TBI patients.</p><p class="paper-source">Journal of Neurotrauma, 2022 | DOI: 10.1089/neu.2022.0134</p><a href="#" class="btn-download">📄 View Paper</a></div>
+          <div class="glass-card paper-card"><div class="paper-badge">Clinical Trial</div><h4>Hyperbaric Oxygen in Wound Healing: RCT Evidence</h4><p class="paper-abstract">Prospective randomized trial demonstrating 40% faster wound closure in diabetic foot ulcers with adjunctive HBOT compared to standard of care alone.</p><p class="paper-source">Wound Repair & Regeneration, 2023 | UHMS Approved</p><a href="#" class="btn-download">📄 View Paper</a></div>
+          <div class="glass-card paper-card"><div class="paper-badge">Research Study</div><h4>HBOT & Post-COVID Neurological Symptoms</h4><p class="paper-abstract">Multicenter study from Israel showing HBOT protocols significantly improved cognitive symptoms, fatigue and quality of life in long COVID patients.</p><p class="paper-source">Scientific Reports, Nature, 2022 | Tel Aviv University</p><a href="#" class="btn-download">📄 View Paper</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFRARED SAUNA -->
+    <div class="page-section" id="therapy-sauna">
+      <div class="therapy-header">
+        <div>
+          <h3 class="section-title" style="font-size:2.2rem">Infrared Sauna <em>Therapy</em></h3>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Unlike conventional saunas that heat the air, infrared saunas emit radiant heat absorbed directly by the skin and tissues. Far-infrared wavelengths penetrate 4–5 cm beneath the skin surface, gently raising core body temperature and inducing a deep, detoxifying sweat at a more comfortable 45–60°C ambient temperature.</p>
+          <p style="color:var(--text-muted);line-height:1.8">This gentle yet powerful heat activates cellular mitochondria, increases circulation, supports lymphatic drainage and stimulates the release of toxins stored in fat cells — delivering results that regular exercise alone cannot achieve.</p>
+        </div>
+        <div class="therapy-visual-box">
+          <div class="therapy-visual-glow" style="background:radial-gradient(circle,rgba(193,178,84,.15),transparent 70%)"></div>
+          <div class="therapy-big-icon">🌡️</div>
+          <p style="color:var(--text-muted);font-size:.85rem;text-align:center;line-height:1.6;position:relative;z-index:1">Far-infrared penetrates 4–5cm<br>into muscle and tissue</p>
+          <div style="display:flex;gap:1rem;margin-top:1.5rem;position:relative;z-index:1">
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-gold)">45–60</div><div style="font-size:.72rem;color:var(--text-muted)">°C Temperature</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-gold)">30–45</div><div style="font-size:.72rem;color:var(--text-muted)">Min/Session</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-gold)">FIR</div><div style="font-size:.72rem;color:var(--text-muted)">Infrared Rays</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-item glass-card"><div class="benefit-icon">🧬</div><div class="benefit-title">Deep Detox</div><div class="benefit-text">Eliminates heavy metals, BPA, and environmental toxins through sweat</div></div>
+        <div class="benefit-item glass-card"><div class="benefit-icon">🧠</div><div class="benefit-title">Stress Relief</div><div class="benefit-text">Lowers cortisol, activates parasympathetic nervous system</div></div>
+        <div class="benefit-item glass-card"><div class="benefit-icon">❤️</div><div class="benefit-title">Circulation</div><div class="benefit-text">Improves blood flow, supports cardiovascular health</div></div>
+        <div class="benefit-item glass-card"><div class="benefit-icon">💪</div><div class="benefit-title">Muscle Recovery</div><div class="benefit-text">Reduces DOMS, accelerates post-workout recovery</div></div>
+        <div class="benefit-item glass-card"><div class="benefit-icon">✨</div><div class="benefit-title">Skin Rejuvenation</div><div class="benefit-text">Promotes collagen production and clearer complexion</div></div>
+        <div class="benefit-item glass-card"><div class="benefit-icon">🌙</div><div class="benefit-title">Better Sleep</div><div class="benefit-text">Regulates melatonin, improves sleep quality & depth</div></div>
+      </div>
+
+      <div class="dos-donts reveal">
+        <div class="glass-card dos-card">
+          <h4>✅ Do's for Sauna Therapy</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Drink 500ml water before your session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Start with 15 minutes, build to 30–45 over time</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Use a clean towel to sit on</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Shower with cool water after session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Replenish electrolytes post-session</li>
+          </ul>
+        </div>
+        <div class="glass-card donts-card">
+          <h4>🚫 Don'ts for Sauna Therapy</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Avoid sauna if pregnant or breastfeeding</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> No alcohol before or after session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Do not exceed recommended session duration</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Avoid if you have active skin conditions</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Don't eat a heavy meal within 2 hours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="adv-disadv reveal">
+        <div class="glass-card adv-card"><h4>Advantages</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem"><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Lower temperature, more comfortable than steam sauna</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Cellular-level detoxification</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Backed by robust clinical research</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Suitable for most healthy adults</li></ul></div>
+        <div class="glass-card disadv-card"><h4>Considerations</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem"><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Not recommended for certain cardiac conditions</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Dehydration risk if proper water intake not maintained</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Temporary fatigue after first few sessions</li></ul></div>
+      </div>
+    </div>
+
+    <!-- HYDROCOLON -->
+    <div class="page-section" id="therapy-hydro">
+      <div class="therapy-header">
+        <div>
+          <h3 class="section-title" style="font-size:2.2rem">Hydrocolon <em>Therapy</em></h3>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Hydrocolon therapy (colonic hydrotherapy) is a gentle, controlled cleansing of the entire large intestine using warm, purified water. A trained therapist regulates water temperature, pressure and flow through FDA-approved, single-use equipment to thoroughly remove accumulated waste, gas, toxins and mucoid plaque.</p>
+          <p style="color:var(--text-muted);line-height:1.8">Unlike harsh laxatives, colon hydrotherapy works with your body's natural elimination process, supporting the restoration of healthy bowel function, gut microbiome balance and whole-body detoxification.</p>
+        </div>
+        <div class="therapy-visual-box">
+          <div class="therapy-visual-glow" style="background:radial-gradient(circle,rgba(144, 169, 85, 0.15),transparent 70%)"></div>
+          <div class="therapy-big-icon">💧</div>
+          <p style="color:var(--text-muted);font-size:.85rem;text-align:center;line-height:1.6;position:relative;z-index:1">FDA-approved equipment,<br>single-use sterile disposables</p>
+          <div style="display:flex;gap:1rem;margin-top:1.5rem;position:relative;z-index:1">
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">45–60</div><div style="font-size:.72rem;color:var(--text-muted)">Minutes/Session</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">37°C</div><div style="font-size:.72rem;color:var(--text-muted)">Water Temp</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--accent-primary)">100%</div><div style="font-size:.72rem;color:var(--text-muted)">Sterile</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid reveal">
+        <div class="glass-card info-card">
+          <h4>Benefits for Gut Health</h4>
+          <ul>
+            <li>Improved digestion & nutrient absorption</li>
+            <li>Significant reduction in bloating & gas</li>
+            <li>Complete whole-body detoxification</li>
+            <li>Restoration of healthy gut microbiome</li>
+            <li>Relief from IBS and constipation symptoms</li>
+            <li>Improved skin clarity and complexion</li>
+            <li>Enhanced energy and mental clarity</li>
+          </ul>
+        </div>
+        <div class="glass-card info-card">
+          <h4>Hygiene & Safety Standards</h4>
+          <ul>
+            <li>100% single-use, sterile disposable equipment</li>
+            <li>FDA-approved colon hydrotherapy device (LIBBE)</li>
+            <li>Purified, temperature-controlled water</li>
+            <li>Certified therapist present throughout</li>
+            <li>Private, dignified therapy rooms</li>
+            <li>Detailed health intake before session</li>
+            <li>Medical supervision available on-site</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dos-donts reveal">
+        <div class="glass-card dos-card">
+          <h4>✅ Before & After Care</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Eat lightly 2–4 hours before session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Stay well hydrated the day before</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Take a probiotic supplement after therapy</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Eat easy-to-digest foods for 24 hours after</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-secondary)">✓</span> Communicate any discomfort to your therapist</li>
+          </ul>
+        </div>
+        <div class="glass-card donts-card">
+          <h4>🚫 Contraindications</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem">
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Not suitable during pregnancy</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Avoid with active inflammatory bowel disease</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Not recommended within 6 weeks of bowel surgery</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Avoid heavy meals 4 hours before session</li>
+            <li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold)">✗</span> Consult physician if on blood thinners</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="adv-disadv reveal">
+        <div class="glass-card adv-card"><h4>Advantages</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem"><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Non-pharmacological, drug-free approach</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Immediate relief from bloating and heaviness</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Supports liver and kidney detoxification</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-primary)">+</span> Enhances effectiveness of other wellness therapies</li></ul></div>
+        <div class="glass-card disadv-card"><h4>Considerations</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem"><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> May cause mild cramping or bloating during session</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Temporary disruption of gut microbiome balance</li><li style="color:var(--text-muted);font-size:.88rem;display:flex;gap:.6rem"><span style="color:var(--accent-gold-light)">—</span> Requires professional setting, not a home treatment</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO CENTER -->
+<section class="section-pad" id="videos" style="background:var(--bg-secondary);border-top:1px solid var(--border-color)">
+  <div class="container">
+    <span class="section-label reveal">Video Learning Center</span>
+    <h2 class="section-title reveal">Learn From Our <em>Experts</em></h2>
+    <p class="section-subtitle reveal">Certified educational content to help you understand your therapy and make informed wellness decisions.</p>
+
+    <div class="video-search reveal">
+      <input type="text" class="search-input" placeholder="🔍  Search videos..." id="videoSearch" oninput="filterVideos()">
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterByCategory('all',this)">All</button>
+        <button class="filter-tab" onclick="filterByCategory('hbot',this)">HBOT</button>
+        <button class="filter-tab" onclick="filterByCategory('sauna',this)">Sauna</button>
+        <button class="filter-tab" onclick="filterByCategory('hydro',this)">Hydrocolon</button>
+        <button class="filter-tab" onclick="filterByCategory('science',this)">Science</button>
+      </div>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+      <div class="glass-card video-card" data-cat="hbot" data-title="what is hyperbaric oxygen therapy explained">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">12:34</div>
+        </div>
+        <div class="video-info"><div class="video-category">HBOT</div><div class="video-title">What is Hyperbaric Oxygen Therapy? Complete Explained Guide</div><div class="video-duration">⏱ 12 min • Dr. Priya Sharma</div></div>
+      </div>
+      <div class="glass-card video-card" data-cat="hbot" data-title="hbot science cellular healing oxygen">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">8:45</div>
+        </div>
+        <div class="video-info"><div class="video-category">HBOT · Science</div><div class="video-title">The Science of Cellular Healing with Oxygen Therapy</div><div class="video-duration">⏱ 8 min • Medical Series</div></div>
+      </div>
+      <div class="glass-card video-card" data-cat="sauna" data-title="infrared sauna therapy benefits detox">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">10:12</div>
+        </div>
+        <div class="video-info"><div class="video-category">Infrared Sauna</div><div class="video-title">Infrared Sauna: How Deep Detox Actually Works</div><div class="video-duration">⏱ 10 min • Ms. Ananya Joshi</div></div>
+      </div>
+      <div class="glass-card video-card" data-cat="hydro" data-title="hydrocolon therapy colon cleanse gut health">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">14:20</div>
+        </div>
+        <div class="video-info"><div class="video-category">Hydrocolon</div><div class="video-title">Hydrocolon Therapy: A Complete Patient Guide</div><div class="video-duration">⏱ 14 min • Mr. Kiran Patel</div></div>
+      </div>
+      <div class="glass-card video-card" data-cat="science" data-title="oxygen therapy anti-aging stem cell research">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">18:05</div>
+        </div>
+        <div class="video-info"><div class="video-category">Science</div><div class="video-title">Oxygen & Anti-Aging: What the Research Actually Shows</div><div class="video-duration">⏱ 18 min • Dr. Rohan Mehta</div></div>
+      </div>
+      <div class="glass-card video-card" data-cat="hbot" data-title="hbot patient story sports recovery">
+        <div class="video-thumb" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary))">
+          <div class="video-play">▶</div>
+          <div class="video-overlay"></div>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,0,0,.6);padding:.2rem .5rem;border-radius:4px;font-size:.72rem;color:#fff;z-index:2">6:30</div>
+        </div>
+        <div class="video-info"><div class="video-category">HBOT · Patient Story</div><div class="video-title">From Injury to Marathon: Rahul's HBOT Recovery Story</div><div class="video-duration">⏱ 6 min • Patient Testimonial</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH HUB -->
+<section class="section-pad" id="research">
+  <div class="container">
+    <span class="section-label reveal">Knowledge Hub</span>
+    <h2 class="section-title reveal">Research & <em>Science Library</em></h2>
+    <p class="section-subtitle reveal">Evidence-based resources curated from top medical journals and research institutions worldwide.</p>
+
+    <div class="research-grid reveal">
+      <div class="glass-card paper-card"><div class="paper-badge">UHMS Guideline</div><h4>Approved Indications for HBOT — 14th Edition</h4><p class="paper-abstract">Comprehensive clinical guidelines from the Undersea and Hyperbaric Medical Society covering all evidence-based approved indications for hyperbaric oxygen therapy.</p><p class="paper-source">Undersea & Hyperbaric Medical Society, 2023</p><a href="#" class="btn-download">📄 Download PDF</a></div>
+      <div class="glass-card paper-card"><div class="paper-badge">Meta Analysis</div><h4>Infrared Sauna for Cardiovascular Health: A Review</h4><p class="paper-abstract">Analysis of 40 studies examining the cardiovascular benefits of regular infrared sauna use, finding significant improvements in blood pressure, heart function and vascular health.</p><p class="paper-source">Journal of Human Hypertension, 2021</p><a href="#" class="btn-download">📄 Download PDF</a></div>
+      <div class="glass-card paper-card"><div class="paper-badge">Clinical Study</div><h4>Gut Microbiome & Colon Hydrotherapy: Pilot Study</h4><p class="paper-abstract">Pilot study examining microbiome changes following a series of colon hydrotherapy sessions, with assessment of patient-reported outcomes for digestive symptoms.</p><p class="paper-source">Integrative Medicine Research, 2022</p><a href="#" class="btn-download">📄 Download PDF</a></div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:5rem">
+      <span class="section-label reveal">Common Questions</span>
+      <h3 class="section-title reveal" style="font-size:2rem">Therapy <em>FAQs</em></h3>
+      <div class="faq-list reveal" id="faqList">
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How many HBOT sessions do I need? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>The number of sessions depends on your specific condition and wellness goals. For general wellness and recovery, we typically recommend 10–20 sessions. For medical indications like wound healing or neurological support, protocols may range from 20–40 sessions. Our medical team will create a personalized plan after your initial consultation.</p></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Is Hyperbaric Oxygen Therapy safe? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Yes, HBOT is a very safe therapy when administered by certified professionals in a proper clinical setting. Our facility maintains strict international safety standards, and all sessions are medically supervised. Rare side effects include temporary ear pressure discomfort during compression, which is easily managed. We conduct a thorough medical screening before every patient's first session.</p></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What should I wear for my infrared sauna session? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Loose, comfortable cotton clothing or a bathing suit works well for infrared sauna sessions. You'll be provided with a clean towel. Avoid synthetic fabrics which can trap heat uncomfortably. Most clients prefer a minimal coverage bathing suit for maximum skin exposure to infrared rays, which enhances the detoxification effect.</p></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Is hydrocolon therapy painful or uncomfortable? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Most patients describe the sensation as mild pressure or fullness, similar to the urge to have a bowel movement. Our skilled therapists ensure your complete comfort throughout, carefully regulating water temperature and pressure. Any discomfort should be communicated immediately so adjustments can be made. Many patients find the experience relaxing once they are used to the sensation.</p></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Can I combine multiple therapies in one visit? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Absolutely — our Wellness Combination Packages are designed to maximize healing through synergistic therapy protocols. Popular combinations include HBOT followed by infrared sauna (for enhanced detox and recovery), or a prep-cleanse session with hydrocolon before beginning an HBOT protocol. Our wellness consultants will recommend the best combination for your goals.</p></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you accept health insurance? <span class="faq-arrow">+</span></button><div class="faq-answer"><p>Some HBOT sessions for approved medical indications may be covered by certain health insurance providers. We will provide you with itemized receipts and medical documentation to support your insurance claim. Please contact our billing team with your insurance details before your session and we will do our best to facilitate coverage for eligible treatments.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad" style="background:var(--bg-secondary);border-top:1px solid var(--border-color)">
+  <div class="container">
+    <span class="section-label reveal">Patient Stories</span>
+    <h2 class="section-title reveal">Real People, <em>Real Results</em></h2>
+    <div class="testimonials-slider reveal">
+      <div class="testimonials-track" id="testimonialTrack">
+        <div class="glass-card testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"After my knee surgery, I was told recovery would take 6 months. With HBOT at Oxygen Wellness Clinic, I was back running in 10 weeks. The team was exceptional — knowledgeable, caring and always available."</p><div class="testimonial-author"><div class="testimonial-avatar">RK</div><div><div class="testimonial-name">Rajesh Kapoor</div><div class="testimonial-therapy">HBOT · Sports Recovery</div></div></div></div>
+        <div class="glass-card testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"I came to the clinic struggling with chronic fatigue for two years. The combination of HBOT and infrared sauna completely transformed my energy levels. I feel like myself again — it's been life-changing."</p><div class="testimonial-author"><div class="testimonial-avatar">SA</div><div><div class="testimonial-name">Sunita Agarwal</div><div class="testimonial-therapy">HBOT + Infrared Sauna · Fatigue</div></div></div></div>
+        <div class="glass-card testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"The hydrocolon therapy resolved my decade-long bloating and digestive issues. I was skeptical at first but the team was so professional and thorough. My gut health has never been better. Highly recommend!"</p><div class="testimonial-author"><div class="testimonial-avatar">PM</div><div><div class="testimonial-name">Preethi Menon</div><div class="testimonial-therapy">Hydrocolon · Digestive Wellness</div></div></div></div>
+        <div class="glass-card testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"As a competitive swimmer, recovery is everything. Regular infrared sauna sessions at Oxygen Wellness have dramatically reduced my muscle soreness and improved my sleep quality. An absolute game changer for athletic performance."</p><div class="testimonial-author"><div class="testimonial-avatar">AV</div><div><div class="testimonial-name">Arjun Verma</div><div class="testimonial-therapy">Infrared Sauna · Athletic Performance</div></div></div></div>
+        <div class="glass-card testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"My mother had a stroke 3 years ago. After starting HBOT sessions, her speech and cognitive function improved significantly. The doctors who initially dismissed it were amazed by the improvements. Eternally grateful."</p><div class="testimonial-author"><div class="testimonial-avatar">DM</div><div><div class="testimonial-name">Divya Malhotra</div><div class="testimonial-therapy">HBOT · Stroke Recovery</div></div></div></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="slideTestimonials(-1)">←</button>
+        <button class="slider-btn" onclick="slideTestimonials(1)">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section-pad booking-section" id="booking">
+  <div class="container">
+    <span class="section-label reveal" style="text-align:center;display:block">Book an Appointment</span>
+    <h2 class="section-title reveal" style="text-align:center">Start Your <em>Healing Journey</em></h2>
+    <div class="booking-card reveal">
+      <div class="booking-steps">
+        <div class="booking-step active"><div class="step-circle">1</div><div class="step-label">Choose Therapy</div></div>
+        <div class="booking-step"><div class="step-circle">2</div><div class="step-label">Pick Date</div></div>
+        <div class="booking-step"><div class="step-circle">3</div><div class="step-label">Select Time</div></div>
+        <div class="booking-step"><div class="step-circle">4</div><div class="step-label">Your Details</div></div>
+      </div>
+
+      <div id="bookingStep1">
+        <h4 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.2rem">Select Your Therapy</h4>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem">
+          <div class="glass-card" style="padding:1.5rem;text-align:center;cursor:pointer;border-radius:16px" onclick="selectTherapyOption(this,'Hyperbaric Oxygen Therapy')"><div style="font-size:2rem;margin-bottom:.5rem">🫧</div><div style="font-size:.85rem;font-weight:600">HBOT</div><div style="font-size:.72rem;color:var(--text-muted)">60–90 min session</div></div>
+          <div class="glass-card" style="padding:1.5rem;text-align:center;cursor:pointer;border-radius:16px" onclick="selectTherapyOption(this,'Infrared Sauna Therapy')"><div style="font-size:2rem;margin-bottom:.5rem">🌡️</div><div style="font-size:.85rem;font-weight:600">Infrared Sauna</div><div style="font-size:.72rem;color:var(--text-muted)">30–45 min session</div></div>
+          <div class="glass-card" style="padding:1.5rem;text-align:center;cursor:pointer;border-radius:16px" onclick="selectTherapyOption(this,'Hydrocolon Therapy')"><div style="font-size:2rem;margin-bottom:.5rem">💧</div><div style="font-size:.85rem;font-weight:600">Hydrocolon</div><div style="font-size:.72rem;color:var(--text-muted)">45–60 min session</div></div>
+          <div class="glass-card" style="padding:1.5rem;text-align:center;cursor:pointer;border-radius:16px" onclick="selectTherapyOption(this,'Wellness Consultation')"><div style="font-size:2rem;margin-bottom:.5rem">📋</div><div style="font-size:.85rem;font-weight:600">Consultation</div><div style="font-size:.72rem;color:var(--text-muted)">30 min • Free</div></div>
+        </div>
+
+        <h4 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1rem">Select a Date</h4>
+        <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:16px;padding:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+            <button onclick="changeMonth(-1)" style="background:none;border:none;color:var(--accent-primary);font-size:1.3rem;cursor:pointer">←</button>
+            <span id="calMonth" style="font-family:var(--font-display);font-size:1.1rem"></span>
+            <button onclick="changeMonth(1)" style="background:none;border:none;color:var(--accent-primary);font-size:1.3rem;cursor:pointer">→</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-day-header">Su</div><div class="cal-day-header">Mo</div><div class="cal-day-header">Tu</div><div class="cal-day-header">We</div><div class="cal-day-header">Th</div><div class="cal-day-header">Fr</div><div class="cal-day-header">Sa</div>
+          </div>
+          <div class="calendar-grid" id="calGrid" style="margin-top:.5rem"></div>
+        </div>
+
+        <h4 style="font-family:var(--font-display);font-size:1.1rem;margin:1.2rem 0 .8rem">Available Time Slots</h4>
+        <div class="time-slots" id="timeSlots">
+          <div class="time-slot" onclick="selectTime(this)">9:00 AM</div>
+          <div class="time-slot" onclick="selectTime(this)">10:00 AM</div>
+          <div class="time-slot" onclick="selectTime(this)">11:00 AM</div>
+          <div class="time-slot" onclick="selectTime(this)">12:00 PM</div>
+          <div class="time-slot" onclick="selectTime(this)" style="opacity:.4;pointer-events:none">2:00 PM</div>
+          <div class="time-slot" onclick="selectTime(this)">3:00 PM</div>
+          <div class="time-slot" onclick="selectTime(this)">4:00 PM</div>
+          <div class="time-slot" onclick="selectTime(this)">5:00 PM</div>
+          <div class="time-slot" onclick="selectTime(this)">6:00 PM</div>
+        </div>
+        <p style="font-size:.75rem;color:var(--text-muted);margin-top:.6rem">⚪ 2:00 PM is unavailable today</p>
+
+        <h4 style="font-family:var(--font-display);font-size:1.1rem;margin:1.5rem 0 .8rem">Your Details</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="bookName" placeholder="Your full name"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" id="bookPhone" placeholder="+91 XXXXX XXXXX"></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" id="bookEmail" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Message (Optional)</label><input type="text" class="form-input" id="bookMsg" placeholder="Any special requirements?"></div>
+        </div>
+        <button class="btn-primary" onclick="submitBooking()" style="width:100%;justify-content:center;margin-top:1rem;font-size:1rem;padding:1rem">Confirm Appointment →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-pad" id="contact">
+  <div class="container">
+    <span class="section-label reveal">Get in Touch</span>
+    <h2 class="section-title reveal">We'd Love to <em>Hear From You</em></h2>
+    <div class="contact-grid reveal">
+      <div>
+        <form onsubmit="submitContact(event)">
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="cName" placeholder="Your full name" required></div>
+          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" id="cEmail" placeholder="your@email.com" required></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" id="cPhone" placeholder="+91 XXXXX XXXXX"></div>
+          <div class="form-group"><label class="form-label">Therapy of Interest</label>
+            <select class="form-select form-input" id="cTherapy">
+              <option value="">Select a therapy</option>
+              <option>Hyperbaric Oxygen Therapy (HBOT)</option>
+              <option>Infrared Sauna Therapy</option>
+              <option>Hydrocolon Therapy</option>
+              <option>Wellness Consultation</option>
+              <option>Combination Package</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">Preferred Date</label><input type="date" class="form-input" id="cDate"></div>
+          <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea form-input" id="cMsg" placeholder="Tell us about your wellness goals or questions..."></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">Send Message ✉️</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <div class="glass-card contact-card">
+          <div class="contact-card-icon">📍</div>
+          <h4>Clinic Address</h4>
+          <p>123 Wellness Avenue, Bandra West<br>Mumbai, Maharashtra 400050</p>
+        </div>
+        <div class="glass-card contact-card">
+          <div class="contact-card-icon">📞</div>
+          <h4>Phone & WhatsApp</h4>
+          <a href="tel:+919XXXXXXXXX">+91-9XXXXXXXXX</a>
+        </div>
+        <div class="glass-card contact-card">
+          <div class="contact-card-icon">📧</div>
+          <h4>Email</h4>
+          <a href="mailto:info@oxygenwellnessclinic.com">info@oxygenwellnessclinic.com</a>
+        </div>
+        <div class="glass-card contact-card">
+          <div class="contact-card-icon">📸</div>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/oxygenwellnessclinic" target="_blank">@oxygenwellnessclinic</a>
+        </div>
+        <div class="glass-card contact-card">
+          <div class="contact-card-icon">🕐</div>
+          <h4>Opening Hours</h4>
+          <div class="hours-grid">
+            <div class="hours-row"><span>Mon – Fri</span><span>9am – 7pm</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9am – 5pm</span></div>
+            <div class="hours-row"><span>Sunday</span><span>10am – 3pm</span></div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-pin">📍</div>
+          <p style="font-weight:500">Oxygen Wellness Clinic</p>
+          <p>Bandra West, Mumbai</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-outline" style="margin-top:.5rem;font-size:.82rem;padding:.5rem 1.2rem">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom:1.2rem;display:inline-flex">
+          <div class="nav-logo-icon">🫁</div>
+          <div><div class="nav-logo-text">Oxygen Wellness</div><div class="nav-logo-sub">Clinic</div></div>
+        </a>
+        <p class="footer-desc">Mumbai's premier certified oxygen therapy and holistic wellness clinic. Science-backed healing with a human touch.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/oxygenwellnessclinic" class="social-icon" title="Instagram">📸</a>
+          <a href="https://wa.me/91XXXXXXXXXX" class="social-icon" title="WhatsApp">💬</a>
+          <a href="mailto:info@oxygenwellnessclinic.com" class="social-icon" title="Email">📧</a>
+          <a href="#" class="social-icon" title="YouTube">▶</a>
+          <a href="#" class="social-icon" title="Facebook">👥</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Therapies</h4>
+        <ul class="footer-links">
+          <li><a href="#therapies" onclick="showTherapy('hbot')">Hyperbaric Oxygen Therapy</a></li>
+          <li><a href="#therapies" onclick="showTherapy('sauna')">Infrared Sauna Therapy</a></li>
+          <li><a href="#therapies" onclick="showTherapy('hydro')">Hydrocolon Therapy</a></li>
+          <li><a href="#booking">Combination Packages</a></li>
+          <li><a href="#booking">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#videos">Video Center</a></li>
+          <li><a href="#research">Research Library</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#booking">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color:var(--text-muted);font-size:.85rem;margin-bottom:.8rem">Get wellness tips, research updates and exclusive offers.</p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="your@email.com">
+          <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <p style="color:var(--text-muted);font-size:.78rem;margin-top:1rem">📍 123 Wellness Avenue, Bandra West<br>Mumbai, Maharashtra 400050</p>
+        <p style="margin-top:.5rem"><a href="tel:+919XXXXXXXXX" style="color:var(--accent-primary);font-size:.85rem;text-decoration:none">📞 +91-9XXXXXXXXX</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Oxygen Wellness Clinic. All rights reserved. | Mumbai, India</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">💬</a>
+<button class="chat-btn" onclick="toggleChatbot()" title="AI Wellness Assistant">🤖</button>
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode" id="themeBtn">🌙</button>
+
+<!-- CHATBOT -->
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <div class="chatbot-header-info"><div class="chatbot-avatar">🤖</div><div><div class="chatbot-name">OxyBot Assistant</div><div class="chatbot-status">Online · Typically replies instantly</div></div></div>
+    <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="chat-msg bot">👋 Hello! I'm OxyBot, your Oxygen Wellness Clinic assistant. How can I help you today?</div>
+    <div class="chat-msg bot">You can ask me about our therapies, pricing, booking, or safety information!</div>
+  </div>
+  <div class="chatbot-quick">
+    <button class="quick-btn" onclick="quickAsk('What is HBOT?')">What is HBOT?</button>
+    <button class="quick-btn" onclick="quickAsk('Book appointment')">Book Appointment</button>
+    <button class="quick-btn" onclick="quickAsk('Prices')">Pricing</button>
+    <button class="quick-btn" onclick="quickAsk('Location')">Location</button>
+  </div>
+  <div class="chatbot-input-row">
+    <input type="text" class="chatbot-input" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chatbot-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- SUCCESS POPUP -->
+<div class="overlay-bg" id="overlayBg" onclick="closePopup()"></div>
+<div class="success-popup" id="successPopup">
+  <div class="success-icon">✓</div>
+  <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:.8rem">Booking Confirmed!</h3>
+  <p style="color:var(--text-muted);font-size:.9rem;line-height:1.7;margin-bottom:2rem">Your appointment request has been received. Our team will contact you within 2 hours to confirm your session details.</p>
+  <p style="color:var(--accent-primary);font-size:.85rem;font-weight:600;margin-bottom:1.5rem">📞 Expect a call at your registered number</p>
+  <button class="btn-primary" onclick="closePopup()" style="width:100%;justify-content:center">Done</button>
+</div>
+
+<script>
+// ── THEME PERSISTENCE ──────────────────────────────────────
+let currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+document.getElementById('themeBtn').textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+// ── PARTICLES ──────────────────────────────────────────────
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+let W, H, particles = [];
+function resizeCanvas(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
+resizeCanvas();
+window.addEventListener('resize',resizeCanvas);
+
+class Particle {
+  constructor(){this.reset()}
+  reset(){
+    this.x=Math.random()*W;
+    this.y=Math.random()*H+H;
+    this.r=Math.random()*3+1;
+    this.speed=Math.random()*.5+.2;
+    this.opacity=Math.random()*.4+.1;
+    this.drift=(Math.random()-.5)*.3;
+    // Use theme-aware colors
+    const isDark = currentTheme === 'dark';
+    this.color = isDark ? '144,169,85' : '108,134,48';
+  }
+  update(){this.y-=this.speed;this.x+=this.drift;if(this.y<-10)this.reset()}
+  draw(){
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(${this.color},${this.opacity})`;
+    ctx.fill();
+  }
+}
+
+for(let i=0;i<80;i++)particles.push(new Particle());
+function animateParticles(){
+  ctx.clearRect(0,0,W,H);
+  particles.forEach(p=>{p.update();p.draw()});
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+// ── NAVBAR ─────────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60)
+});
+
+// ── MOBILE MENU ────────────────────────────────────────────
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+
+// ── SCROLL REVEAL ──────────────────────────────────────────
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// ── COUNTER ANIMATION ──────────────────────────────────────
+function animateCounter(el){
+  const target=parseInt(el.dataset.count);
+  const duration=2000;const start=performance.now();
+  function update(now){
+    const progress=Math.min((now-start)/duration,1);
+    const ease=1-Math.pow(1-progress,3);
+    el.textContent=Math.floor(ease*target).toLocaleString();
+    if(progress<1)requestAnimationFrame(update)
+  }
+  requestAnimationFrame(update)
+}
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target)}})
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterObs.observe(el));
+
+// ── THERAPY TABS ───────────────────────────────────────────
+function showTherapy(id){
+  document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.page-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('therapy-'+id).classList.add('active');
+  const tabs=document.querySelectorAll('.page-tab');
+  const map={hbot:0,sauna:1,hydro:2};
+  if(tabs[map[id]])tabs[map[id]].classList.add('active');
+}
+
+// ── FAQ ACCORDION ──────────────────────────────────────────
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const isOpen=answer.classList.contains('open');
+  document.querySelectorAll('.faq-question').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open')});
+  if(!isOpen){btn.classList.add('open');answer.classList.add('open')}
+}
+
+// ── TESTIMONIALS SLIDER ────────────────────────────────────
+let sliderIndex=0;
+function slideTestimonials(dir){
+  const track=document.getElementById('testimonialTrack');
+  const cards=track.querySelectorAll('.testimonial-card');
+  const cardW=cards[0].offsetWidth+24;
+  const maxIndex=cards.length-Math.floor(track.parentElement.offsetWidth/cardW);
+  sliderIndex=Math.max(0,Math.min(sliderIndex+dir,maxIndex));
+  track.style.transform=`translateX(-${sliderIndex*cardW}px)`;
+}
+setInterval(()=>slideTestimonials(1),5000);
+
+// ── CALENDAR ───────────────────────────────────────────────
+let calDate=new Date();
+function renderCalendar(){
+  const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('calMonth').textContent=`${months[calDate.getMonth()]} ${calDate.getFullYear()}`;
+  const grid=document.getElementById('calGrid');
+  grid.innerHTML='';
+  const first=new Date(calDate.getFullYear(),calDate.getMonth(),1).getDay();
+  const days=new Date(calDate.getFullYear(),calDate.getMonth()+1,0).getDate();
+  const today=new Date();
+  for(let i=0;i<first;i++){const d=document.createElement('div');d.className='cal-day empty';grid.appendChild(d)}
+  for(let d=1;d<=days;d++){
+    const el=document.createElement('div');el.className='cal-day';el.textContent=d;
+    const thisDate=new Date(calDate.getFullYear(),calDate.getMonth(),d);
+    if(thisDate<new Date(today.getFullYear(),today.getMonth(),today.getDate()))el.classList.add('past');
+    else if(d===today.getDate()&&calDate.getMonth()===today.getMonth()&&calDate.getFullYear()===today.getFullYear())el.classList.add('today');
+    else el.addEventListener('click',function(){document.querySelectorAll('.cal-day').forEach(x=>x.classList.remove('selected'));this.classList.add('selected')});
+    grid.appendChild(el);
+  }
+}
+function changeMonth(dir){calDate.setMonth(calDate.getMonth()+dir);renderCalendar()}
+renderCalendar();
+
+// ── TIME SLOT ──────────────────────────────────────────────
+function selectTime(el){document.querySelectorAll('.time-slot').forEach(s=>s.classList.remove('selected'));el.classList.add('selected')}
+
+// ── THERAPY BOOKING OPTION ─────────────────────────────────
+function selectTherapyOption(el,name){
+  document.querySelectorAll('.booking-card .glass-card').forEach(c=>{c.style.borderColor='';c.style.background=''});
+  el.style.borderColor='var(--accent-primary)';el.style.background='rgba(144, 169, 85, 0.1)';
+}
+
+// ── SUBMIT BOOKING ─────────────────────────────────────────
+function submitBooking(){
+  const name=document.getElementById('bookName').value;
+  const phone=document.getElementById('bookPhone').value;
+  if(!name||!phone){alert('Please fill in your name and phone number.');return}
+  showPopup();
+}
+
+// ── SUBMIT CONTACT ─────────────────────────────────────────
+function submitContact(e){e.preventDefault();showPopup()}
+
+// ── POPUP ──────────────────────────────────────────────────
+function showPopup(){document.getElementById('overlayBg').classList.add('active');document.getElementById('successPopup').classList.add('active')}
+function closePopup(){document.getElementById('overlayBg').classList.remove('active');document.getElementById('successPopup').classList.remove('active')}
+
+// ── VIDEO FILTER ───────────────────────────────────────────
+let activeCategory='all';
+function filterVideos(){
+  const query=document.getElementById('videoSearch').value.toLowerCase();
+  document.querySelectorAll('#videoGrid .video-card').forEach(card=>{
+    const title=card.dataset.title;
+    const cat=card.dataset.cat;
+    const matchCat=activeCategory==='all'||cat.includes(activeCategory);
+    const matchSearch=!query||title.includes(query);
+    card.style.display=(matchCat&&matchSearch)?'':'none';
+  });
+}
+function filterByCategory(cat,btn){
+  activeCategory=cat;
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  filterVideos();
+}
+
+// ── CHATBOT ────────────────────────────────────────────────
+const chatReplies={
+  'what is hbot':'HBOT (Hyperbaric Oxygen Therapy) delivers 100% pure oxygen at elevated pressure inside a specialized chamber, accelerating your body\'s natural healing. Sessions are 60–90 minutes. 🫧',
+  'book appointment':'I\'d be happy to help you book! Please scroll to our Booking section, or call us at +91-9XXXXXXXXX. You can also send us your preferred date and time here! 📅',
+  'prices':'Our session prices: HBOT from ₹2,500/session, Infrared Sauna from ₹1,200/session, Hydrocolon from ₹2,000/session. Package deals available. Contact us for a personalized quote! 💳',
+  'location':'We\'re located at 123 Wellness Avenue, Bandra West, Mumbai 400050. Open Mon–Fri 9am–7pm, Sat 9am–5pm, Sun 10am–3pm. 📍',
+  'safety':'All our therapies are completely safe under certified medical supervision. We follow ECHM, UHMS and ISO standards. Every patient undergoes a thorough medical intake screening before treatment. 🛡️',
+  'infrared sauna':'Our infrared sauna uses far-infrared rays that penetrate 4–5cm into tissue, promoting deep detox, stress relief, muscle recovery and skin rejuvenation. Sessions are 30–45 minutes. 🌡️',
+  'hydrocolon':'Hydrocolon therapy is a gentle colon cleanse using warm, purified water via FDA-approved equipment. It helps with digestion, bloating, detox and gut wellness. Sessions are 45–60 minutes. 💧',
+};
+function sendChat(){
+  const input=document.getElementById('chatInput');
+  const msg=input.value.trim();
+  if(!msg)return;
+  addChatMsg(msg,'user');
+  input.value='';
+  setTimeout(()=>{
+    const key=Object.keys(chatReplies).find(k=>msg.toLowerCase().includes(k));
+    const reply=key?chatReplies[key]:'Thank you for your message! For detailed assistance, please call us at +91-9XXXXXXXXX or email info@oxygenwellnessclinic.com. Our team typically responds within 2 hours. 😊';
+    addChatMsg(reply,'bot');
+  },600);
+}
+function quickAsk(q){document.getElementById('chatInput').value=q;sendChat()}
+function addChatMsg(text,type){
+  const msgs=document.getElementById('chatMessages');
+  const div=document.createElement('div');
+  div.className=`chat-msg ${type}`;div.textContent=text;
+  msgs.appendChild(div);msgs.scrollTop=msgs.scrollHeight;
+}
+function toggleChatbot(){document.getElementById('chatbotWindow').classList.toggle('active')}
+
+// ── THEME TOGGLE ───────────────────────────────────────────
+function toggleTheme(){
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  localStorage.setItem('theme', currentTheme);
+  document.getElementById('themeBtn').textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+  
+  // Update particles
+  particles.forEach(p => p.reset());
+}
+
+// ── NEWSLETTER ─────────────────────────────────────────────
+function subscribeNewsletter(){
+  const inp=document.querySelector('.newsletter-input');
+  if(inp.value&&inp.value.includes('@')){
+    inp.value='✓ Subscribed! Thank you';
+    inp.style.color='var(--accent-primary)';
+    inp.disabled=true;
+  }
+}
+
+// ── SMOOTH ACTIVE NAV ──────────────────────────────────────
+const sections=['home','about','therapies','videos','research','contact','booking'];
+window.addEventListener('scroll',()=>{
+  const pos=window.scrollY+200;
+  sections.forEach(id=>{
+    const el=document.getElementById(id)||document.getElementById(id+'-preview');
+    if(!el)return;
+    if(pos>=el.offsetTop&&pos<el.offsetTop+el.offsetHeight){
+      document.querySelectorAll('.nav-links a').forEach(a=>{
+        a.style.color=a.getAttribute('href')==='#'+id?'var(--accent-primary)':'';
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>

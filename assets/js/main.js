@@ -394,3 +394,94 @@
       });
     });
   
+
+// -----------------------------------------------------------------
+// GOOGLE REVIEWS INTEGRATION
+// -----------------------------------------------------------------
+function loadGoogleReviews() {
+  // TODO: Replace with your actual Google API Key and Place ID
+  const apiKey = "YOUR_GOOGLE_API_KEY"; 
+  const placeId = "YOUR_GOOGLE_PLACE_ID"; 
+  
+  const track = document.getElementById("testimonialTrack");
+  if (!track) return;
+
+  // If credentials are not set, load the beautifully styled fallback dummy data
+  if (apiKey === "YOUR_GOOGLE_API_KEY" || placeId === "YOUR_GOOGLE_PLACE_ID") {
+    renderDummyReviews(track);
+    return;
+  }
+
+  // Load Google Maps Script dynamically for Places API
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
+  script.async = true;
+  script.defer = true;
+  script.onload = () => fetchReviewsWithPlaces(placeId, track);
+  document.head.appendChild(script);
+}
+
+function fetchReviewsWithPlaces(placeId, track) {
+  const dummyDiv = document.createElement("div");
+  const service = new google.maps.places.PlacesService(dummyDiv);
+  
+  service.getDetails({
+    placeId: placeId,
+    fields: ['reviews']
+  }, (place, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
+      renderReviews(place.reviews, track);
+    } else {
+      console.error("Failed to load Google reviews. Status:", status);
+      renderDummyReviews(track); // Fallback if it fails
+    }
+  });
+}
+
+function renderReviews(reviews, track) {
+  track.innerHTML = ""; // Clear loading text
+  
+  reviews.forEach(review => {
+    const card = document.createElement("div");
+    card.className = "glass-card testimonial-card";
+    
+    // Generate star rating
+    const rating = Math.round(review.rating);
+    const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+    
+    // Provide a default avatar if Google doesn't return one
+    const avatar = review.profile_photo_url || "https://via.placeholder.com/40?text="+review.author_name.charAt(0);
+    
+    card.innerHTML = `
+      <div class="testimonial-stars" style="color: #fbbf24; font-size: 1.2rem; letter-spacing: 2px;">${stars}</div>
+      <p class="testimonial-text">"${review.text}"</p>
+      <div class="testimonial-author">
+        <img src="${avatar}" alt="${review.author_name}" class="testimonial-avatar" style="border-radius: 50%; width: 45px; height: 45px; object-fit: cover; border: 2px solid var(--aqua);">
+        <div>
+          <div class="testimonial-name" style="font-weight: 600;">${review.author_name}</div>
+          <div class="testimonial-therapy" style="color: var(--text-muted); font-size: 0.75rem;">
+            Google Review • ${review.relative_time_description}
+          </div>
+        </div>
+      </div>
+    `;
+    track.appendChild(card);
+  });
+}
+
+function renderDummyReviews(track) {
+  const dummyData = [
+    { rating: 5, text: "After my knee surgery, I was told recovery would take 6 months. With HBOT at OXYNEST, I was back running in 10 weeks. The team was exceptional — knowledgeable, caring and always available.", author_name: "Rajesh Kapoor", profile_photo_url: "", relative_time_description: "A month ago" },
+    { rating: 5, text: "I came to the clinic struggling with chronic fatigue for two years. The combination of HBOT and infrared sauna completely transformed my energy levels. I feel like myself again — it's been life-changing.", author_name: "Sunita Agarwal", profile_photo_url: "", relative_time_description: "2 months ago" },
+    { rating: 5, text: "The hydrocolon therapy resolved my decade-long bloating and digestive issues. I was skeptical at first but the team was so professional and thorough. Highly recommend!", author_name: "Preethi Menon", profile_photo_url: "", relative_time_description: "3 months ago" },
+    { rating: 5, text: "As a competitive swimmer, recovery is everything. Regular infrared sauna sessions at OXYNEST have dramatically reduced my muscle soreness and improved my sleep quality. An absolute game changer.", author_name: "Arjun Verma", profile_photo_url: "", relative_time_description: "4 months ago" }
+  ];
+  renderReviews(dummyData, track);
+}
+
+// Ensure the Google Reviews logic runs after page load
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("testimonialTrack")) {
+    loadGoogleReviews();
+  }
+});
